@@ -3,10 +3,16 @@
 const routes = [
   {
     method: 'GET',
-    path: '/users/{username?}',
+    path: '/hello/{name?}',
     handler: (request, h) => {
-      const { username = 'stranger' } = request.params
-      return `hallo ${username}!!, selamat datang!!`
+      const { name = 'stranger' } = request.params
+      const { lang } = request.query
+
+      if(lang === 'id'){
+        return `hai ${name}`
+      }
+      return `hello ${name}`
+      
     }
   },
   {

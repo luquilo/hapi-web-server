@@ -12,7 +12,7 @@ const init = async () => {
   
 
   await server.start();
-  console.log(`server berjalan pada ${server.info.uri}`);
+  console.log(`server berjawlan pada ${server.info.uri}`);
 };
 
 init();
